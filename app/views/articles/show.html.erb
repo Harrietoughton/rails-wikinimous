@@ -2,11 +2,11 @@
 <p><%= @article.content %></p>
 
 
-<%= link_to "edit this article", edit_article_path(@article) %>
-<%= link_to "delete '#{@article.title}'",
+<h1><%= link_to "<i class=\"fas fa-pencil-alt\"></i>".html_safe, edit_article_path(@article) %></h1>
+<h1><%= link_to "<i class=\"fas fa-trash-alt\"></i>".html_safe,
              article_path(@article),
              method: :delete,
-             data: { confirm: "Are you sure you want to delete?" } %>
+             data: { confirm: "Are you sure you want to delete?" } %></h1>
 
 <h1><a href="/articles"><i class="fas fa-arrow-circle-left"></i></a></h1>
 
